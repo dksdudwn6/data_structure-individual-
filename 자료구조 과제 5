@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void hanoi(int n, char start, char target, char work) {
+    if (n == 1) {
+        printf("%c에서 원반 1를(을) %c로 옮김\n", start, target);
+        return;
+    }
+
+    hanoi(n - 1, start, work, target); 
+    printf("%c에서 원반 %d를(을) %c로 옮김\n", start, n, target);
+    hanoi(n - 1, work, target, start); 
+}
+
+int main() {
+    int n = 3; 
+    char start = 'A', target = 'C', work = 'B'; 
+
+    printf("하노이 탑 퍼즐을 해결합니다.\n");
+    hanoi(n, start, target, work);
+
+    return 0;
+}
