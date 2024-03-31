@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX_LENGTH 100 
+
+int main() {
+    char str[MAX_LENGTH]; 
+    int length; 
+
+    printf("문자열을 입력하세요: ");
+    fgets(str, sizeof(str), stdin);
+
+    if (str[strlen(str) - 1] == '\n')
+        str[strlen(str) - 1] = '\0';
+
+    printf("\n입력된 문자열은\n\"%s\"\n입니다.\n", str);
+
+    length = strlen(str);
+
+    printf("\n입력된 문자열의 길이=%d\n", length);
+
+    return 0;
+}
