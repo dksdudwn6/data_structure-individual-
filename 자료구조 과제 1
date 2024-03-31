@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX 100
+#define NUM 1
+
+int main() {
+    char* strings[NUM];
+
+    for (int i = 0; i < NUM; i++) {
+        strings[i] = (char*)malloc(MAX * sizeof(char));
+        if (strings[i] == NULL) {
+            fprintf(stderr, "오류\n");
+            exit(1);
+        }
+    }
+
+    printf("문자열을 입력하세요:\n");
+    for (int i = 0; i < NUM; i++) {
+        fgets(strings[i], MAX, stdin);
+    }
+
+    printf("\n입력한 문자열:\n");
+    for (int i = 0; i < NUM; i++) {
+        printf("%s", strings[i]);
+    }
+
+    for (int i = 0; i < NUM; i++) {
+        free(strings[i]);
+    }
+
+    return 0;
+}
