@@ -3,22 +3,22 @@
 
 int main(void) {
 	element item;
-	printf("\n** ¼øÂ÷ ½ºÅÃ ¿¬»ê **\n");
+	printf("\n** ìˆœì°¨ ìŠ¤íƒ ì—°ì‚° **\n");
 	printStack();
-	push(1);	printStack();		// 1 »ğÀÔ
-	push(2);  printStack();		// 2 »ğÀÔ
-	push(3);	printStack();		// 3 »ğ
+	push(1);	printStack();		
+	push(2);  printStack();		
+	push(3);	printStack();		
 
-	item = peek();  printStack();	// ÇöÀç topÀÇ ¿ø¼Ò Ãâ·Â
+	item = peek();  printStack();	
 	printf("peek => %d", item);
 
-	item = pop();  printStack();	// »èÁ¦
+	item = pop();  printStack();	
 	printf("\t pop  => %d", item);
 
-	item = pop();  printStack();	// »èÁ¦
+	item = pop();  printStack();	
 	printf("\t pop  => %d", item);
 
-	item = pop();  printStack();	// »èÁ¦
+	item = pop();  printStack();	
 	printf("\t pop  => %d\n", item);
 
 	getchar();  return 0;
